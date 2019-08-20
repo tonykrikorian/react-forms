@@ -31,7 +31,10 @@ class RegistrationForm extends Form {
           {this.renderInput("username", "Username", "email")}
           {this.renderInput("password", "Password", "password")}
           {this.renderInput("name", "Name")}
-          {this.renderSelectInput("perfil", "Perfil")}
+          {this.renderSelectInput("perfil", "Perfil", [
+            { id: 1, name: "Usuario" },
+            { id: 2, name: "Administrador" }
+          ])}
           {this.renderButton("Register")}
         </form>
       </div>

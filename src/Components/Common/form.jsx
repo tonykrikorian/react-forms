@@ -70,14 +70,14 @@ class Form extends Component {
     );
   };
 
-  renderSelectInput = (name, label) => {
+  renderSelectInput = (name, label, dataSource = []) => {
     const { data, errors } = this.state;
     return (
       <SelectBox
         name={name}
         label={label}
         placeholder="Seleccione el perfil"
-        dataSource={[{ id: 1, name: "User" }, { id: 2, name: "Administrator" }]}
+        dataSource={dataSource}
         onChange={this.handleChange}
         error={errors[name]}
       />
